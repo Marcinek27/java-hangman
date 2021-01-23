@@ -9,12 +9,18 @@ import java.util.List;
 public class HangmanGenerator {
 
 	// klasa odpowiedzialna za wczytywanie slowa z pliku
-	// file reader
+	// file ---> "src/main/resources/slowa.txt"
 
-	public static void appendWordsToList(String path) throws IOException {
+	public static List<String> appendWordsToList(String path) throws IOException {
 
-		List<String> words = Files.readAllLines(Paths.get("/src/main/resources/slowa.txt"));
+		List<String> words = Files.readAllLines(Paths.get(path));
+		return words;
+//		System.out.println(words);
 
 	}
+
+//	public static void main(String[] args) throws IOException {
+//		appendWordsToList("src/main/resources/slowa.txt");
+//	}
 
 }
